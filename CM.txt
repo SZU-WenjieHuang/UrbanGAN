@@ -1,0 +1,20 @@
+conda create --name aigdf2021 python=3.7
+conda activate aigdf2021
+pip install -r requirements.txt
+conda install -n aigdf2021 ipykernel
+python -m ipykernel install --user --name aigdf2021 --display-name aigdf2021
+cd Damn_Data-main
+python setup.py install
+
+conda activate aigdf2021
+cd aigdf2021
+python aigdf2021_get.py
+
+conda activate aigdf2021
+cd aigdf2021
+python aigdf2021_mergecsv.py
+
+conda activate aigdf2021
+cd aigdf2021
+python aigdf2021_cutimg.py
+
